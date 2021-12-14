@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif; 
+}
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  line-height: inherit;
+}
+.home .overlay {
+    background: linear-gradient(to top right, #d2b48c, #000000);
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: auto; 
+}
+.title {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    right: 0;
+    text-align: center; 
+}
+  .title h1{
+    color: #ffffff;
+    font-size: 2em;
+    font-weight: 300;
+    line-height: inherit; 
+  }
+.home .item h5 {
+    color: #ffffff;
+    font-size: 30px; 
+}
+.input-group button{
+    color: #d2b48c; 
+}
+@media (max-width: 991px){
+  .input-group {
+    width: 100% !important;
+   }
+   .title h1{
+     font-size: 22px;
+   } 
+  }
+.nav-toggler {
+    position: fixed;
+    z-index: 100;
+    right: 10px;
+    top: 10px;
+    padding: 15px;
+    cursor: pointer;
+    transition: .5s all ease-in-out; 
+    animation: nav_icon 2s linear infinite ;
+}
+@keyframes nav_icon {
+    0%,
+    10%,
+    20%,
+    50%,
+    80%, 
+    100% {
+      transform: translateY(0);
+  }
+  40%, 60%{
+    transform: translateY(-5px);
+    }
+  }
+.nav-toggler span{
+    font-size: 25px; 
+  }
+.nav-toggler span i{
+    color: #FFF; 
+  }
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #101010;
+    transition: .5s all ease-in-out;
+    clip-path: circle(30px at calc(100% - 65px) 65px);
+    visibility: hidden;
+    z-index: 22; 
+}
+.menu.active .nav {
+    visibility: visible;
+    clip-path: circle(100%);
+    transition: all .5s ease-in; 
+}
+.menu.active .nav-toggler span {
+  height: 0; 
+}
+.menu.active .nav-toggler span::after,
+.menu.active .nav-toggler span::before{
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 3px;
+ }
+.menu.active .nav-toggler span::after {
+   transform: rotate(-45deg);
+ }
+.menu.active .nav-toggler span::before {
+   transform: rotate(45deg); 
+}
+.nav .item ul li{
+  margin-bottom: 12px;
+}
+.nav .item ul li a{
+ text-decoration: none;
+ color: #ffffff;
+ font-size: 14px;
+}
+.nav .item span{
+font-size: 14px;
+color: #ccc;
+}
+.social_media {
+  position: relative;
+}
+.social_media ul li:first-child::after{
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  background-color: #ffffff;
+  right: 35px;
+  top: 15px;
+}
+.social_media ul li{
+  margin: 0 10px;
+  position: relative;
+  transition: .5s all ease-in-out;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social_media ul li a{
+  color: #ffffff;
+}
+.social_media ul li:hover{
+  background: #d2b48c;
+  color: #ffffff;
+}
